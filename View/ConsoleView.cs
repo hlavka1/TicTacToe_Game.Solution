@@ -11,6 +11,21 @@ namespace TicTacToe_Game
     {
         #region ENUMS
 
+        /// <summary>
+        /// display the Exit prompt on a clean screen
+        /// </summary>
+        public void DisplayExitScreen()
+        {
+            ConsoleUtil.DisplayReset();
+
+            Console.CursorVisible = false;
+
+            Console.WriteLine();
+            ConsoleUtil.DisplayMessage("Thank you for play the game.");
+
+            System.Environment.Exit(1);
+        }
+
         public enum ViewState
         {
             Active,
